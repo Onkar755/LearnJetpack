@@ -86,7 +86,6 @@ fun GreetingImage(message: String, from: String, modifier: Modifier = Modifier) 
                 .padding(8.dp)
         )
     }
-
 }
 
 @Preview(showBackground = true)
