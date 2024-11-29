@@ -1,20 +1,26 @@
-package com.example.navigation1
+package com.example.navigation1.navigation.nav_graph
 
 import android.util.Log
-import androidx.compose.runtime.Composable
+import androidx.navigation.NavController
+import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
-import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.navigation.compose.navigation
 import androidx.navigation.navArgument
+import com.example.navigation1.navigation.DETAIL_ARGUMENT_KEY
+import com.example.navigation1.navigation.DETAIL_ARGUMENT_KEY2
+import com.example.navigation1.navigation.HOME_ROUTE
+import com.example.navigation1.navigation.Screen
+import com.example.navigation1.screens.DetailScreen
+import com.example.navigation1.screens.HomeScreen
 
-@Composable
-fun SetUpNavGraph(
+fun NavGraphBuilder.homeNavGraph(
     navController: NavHostController
 ) {
-    NavHost(
-        navController = navController,
-        startDestination = Screen.Home.route
+    navigation(
+        startDestination = Screen.Home.route,
+        route = HOME_ROUTE
     ) {
         composable(
             route = Screen.Home.route,
@@ -40,4 +46,5 @@ fun SetUpNavGraph(
             DetailScreen(navController)
         }
     }
+
 }

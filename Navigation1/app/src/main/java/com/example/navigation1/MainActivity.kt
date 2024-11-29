@@ -8,6 +8,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import com.example.navigation1.navigation.nav_graph.SetUpNavGraph
 import com.example.navigation1.ui.theme.Navigation1Theme
 
 class MainActivity : ComponentActivity() {

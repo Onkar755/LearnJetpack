@@ -1,4 +1,4 @@
-package com.example.navigation1
+package com.example.navigation1.screens
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -15,7 +15,7 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 
 @Composable
-fun HomeScreen(
+fun DetailScreen(
     navController: NavController
 ) {
     Box(
@@ -24,9 +24,9 @@ fun HomeScreen(
     ) {
         Text(
             modifier = Modifier.clickable {
-                navController.navigate(route = Screen.Detail.passNameAndId(id = 23))
+                navController.popBackStack()
             },
-            text = "Home",
+            text = "Detail",
             color = Color.Black,
             fontSize = MaterialTheme.typography.titleLarge.fontSize,
             fontWeight = FontWeight.Bold
@@ -36,6 +36,6 @@ fun HomeScreen(
 
 @Preview(showBackground = true)
 @Composable
-fun HomeScreenPreview() {
-    HomeScreen(navController = rememberNavController())
+fun DetailScreenPreview() {
+    DetailScreen(navController = rememberNavController())
 }
