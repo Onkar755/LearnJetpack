@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.uicomponents"
+    namespace = "com.example.navigation1"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.uicomponents"
+        applicationId = "com.example.navigation1"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -57,6 +57,7 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    // Coil - Image Loading
-    implementation("io.coil-kt:coil-compose:2.4.0")
+    // Navigation
+    val nav_version = "2.8.4"
+    implementation("androidx.navigation:navigation-compose:$nav_version")
 }
